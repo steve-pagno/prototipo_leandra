@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leandra Adriely Store</title> 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+    body { margin: 0; font-family: Arial, sans-serif; background: #111; color: #eee; }
+
+    header { background: #000; text-align: center; padding: 40px 20px; }
+    header h1 { font-family: 'Great Vibes', cursive; font-size: 3rem; color: gold; margin: 0; }
+    header p { font-size: 1.2rem; color: #e91e63; margin-top: 10px; }
+    
+    .hero {
+      background: url('https://images.pexels.com/photos/3775530/pexels-photo-3775530.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+      height: 400px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; font-weight: bold; color: #fff;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    .section { padding: 50px 20px; text-align: center; }
+    .section h2 { color: gold; font-size: 2rem; margin-bottom: 30px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      border: 2px solid #e91e63;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #1a1a1a;
+      transition: 0.3s;
+    }
+    .card:hover { transform: scale(1.05); border-color: gold; }
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card p { padding: 15px; font-weight: bold; color: #fff; }
+
+    .about { background: #222; padding: 50px 20px; }
+    .about p { max-width: 800px; margin: auto; font-size: 1.1rem; line-height: 1.6; color: #ddd; }
+
+    footer { background: #000; color: #aaa; text-align: center; padding: 30px 15px; }
+    footer p { margin: 8px 0; }
+    .socials { margin-top: 15px; }
+    .socials a {
+      margin: 0 10px; display: inline-block; text-decoration: none;
+      color: gold; font-size: 1.5rem; transition: 0.3s;
+    }
+    .socials a:hover { color: #e91e63; }
+  </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+      integrity="sha512-pO2R+kXjWqZ3r3V1J5zD5e5a1J+9n4X4z0n6vWZ06uXJ1u6Nf0M7RzGfJc/3FZp5rXg3e6J2F4s0K9KgY0XUg==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<header>
+  <h1>Leandra Adriely Store</h1>
+  <p>Estilo, beleza e sensualidade</p>
+</header>
+
+<div class="hero">
+  Promoções exclusivas toda semana!
+</div>
+
+<section class="section">
+  <h2>Categorias</h2>
+  <div class="grid">
+    <!-- Moda Feminina -->
+    <div class="card">
+      <img src="https://images.pexels.com/photos/8386648/pexels-photo-8386648.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Moda Feminina">
+      <p>Moda Feminina</p>
+    </div>
+
+    <!-- Moda Masculina -->
+    <div class="card">
+      <img src="https://images.pexels.com/photos/5698847/pexels-photo-5698847.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Moda Masculina">
+      <p>Moda Masculina</p>
+    </div>
+
+    <!-- Bolsas e Acessórios -->
+    <div class="card">
+      <img src="https://images.pexels.com/photos/7679471/pexels-photo-7679471.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bolsas e Acessórios">
+      <p>Bolsas e Acessórios</p>
+    </div>
+
+    <!-- Cosméticos -->
+    <div class="card">
+      <img src="https://images.pexels.com/photos/3018845/pexels-photo-3018845.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cosméticos">
+      <p>Cosméticos</p>
+    </div>
+
+    <!-- Produtos Eróticos -->
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2022/02/03/14/16/sex-6990493_1280.png?auto=compress&cs=tinysrgb&w=800" alt="Produtos Eróticos">
+      <p>Produtos Eróticos</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" style="text-align: center;">
+  <h2>Sobre a Loja</h2>
+  <p>
+    A <strong>Leandra Adriely Store</strong> nasceu com o propósito de oferecer moda, beleza e sensualidade em um só lugar. 
+    Nossa missão é valorizar mulheres e homens que buscam estilo, elegância e autenticidade. 
+    Trabalhamos com carinho para que cada cliente encontre aqui algo que desperte confiança e atitude.
+  </p>
+</section>
+
+<footer>
+  <p>Entre em contato pelo WhatsApp: <a href="https://wa.me/5564992782597">(64) 99278-2597</a></p>
+  <div class="socials">
+    <a href="https://www.instagram.com/leandraadriely" target="_blank" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+  <p>© 2025 - Leandra Adriely Store. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

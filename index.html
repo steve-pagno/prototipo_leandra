@@ -1,128 +1,276 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leandra Adriely Store</title> 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leandra Adriely Store</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
-    body { margin: 0; font-family: Arial, sans-serif; background: #111; color: #eee; }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: #eee;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+      }
 
-    header { background: #000; text-align: center; padding: 40px 20px; }
-    header h1 { font-family: 'Great Vibes', cursive; font-size: 3rem; color: gold; margin: 0; }
-    header p { font-size: 1.2rem; color: #e91e63; margin-top: 10px; }
-    
-    .hero {
-      background: url('https://images.pexels.com/photos/3775530/pexels-photo-3775530.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
-      height: 400px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2.5rem; font-weight: bold; color: #fff;
-      text-shadow: 2px 2px 8px #000;
-    }
+      header {
+        background: #000;
+        text-align: center;
+        padding: 40px 20px;
+      }
+      header h1 {
+        font-family: "Great Vibes", cursive;
+        font-size: clamp(2rem, 4vw + 0.5rem, 3.2rem);
+        color: gold;
+        margin: 0;
+      }
+      header p {
+        font-size: clamp(1rem, 1.2vw + 0.6rem, 1.2rem);
+        font-style: italic;
+        color: #f56e9b;
+        margin-top: 10px;
+      }
 
-    .section { padding: 50px 20px; text-align: center; }
-    .section h2 { color: gold; font-size: 2rem; margin-bottom: 30px; }
+      .hero {
+        background: url("https://images.pexels.com/photos/3775530/pexels-photo-3775530.jpeg?auto=compress&cs=tinysrgb&w=1600")
+          center/cover no-repeat;
+        min-height: clamp(220px, 55vh, 480px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 16px;
+        text-align: center;
+        font-size: clamp(1.4rem, 3vw + 1rem, 2.5rem);
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 8px #000;
+      }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
-      margin: auto;
-    }
+      .section {
+        padding: clamp(32px, 6vw, 64px) 20px;
+        text-align: center;
+      }
+      .section h2 {
+        color: gold;
+        font-size: clamp(1.3rem, 2.5vw + 0.7rem, 2rem);
+        margin-bottom: 30px;
+      }
 
-    .card {
-      border: 2px solid #e91e63;
-      border-radius: 10px;
-      overflow: hidden;
-      background: #1a1a1a;
-      transition: 0.3s;
-    }
-    .card:hover { transform: scale(1.05); border-color: gold; }
-    .card img { width: 100%; height: 200px; object-fit: cover; }
-    .card p { padding: 15px; font-weight: bold; color: #fff; }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: clamp(16px, 3vw, 25px);
+        max-width: 1400px;
+        margin: auto;
+        padding: 0 10px;
+      }
 
-    .about { background: #222; padding: 50px 20px; }
-    .about p { max-width: 800px; margin: auto; font-size: 1.1rem; line-height: 1.6; color: #ddd; }
+      .card {
+        border: 2px solid #e91e63;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #1a1a1a;
+        transition: transform 0.2s ease, border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .card:hover {
+        border-color: gold;
+      }
+      .card img {
+        width: 100%;
+        height: clamp(160px, 22vw, 220px);
+        object-fit: cover;
+        display: block;
+      }
+      .card p {
+        padding: 15px;
+        font-weight: bold;
+        color: #fff;
+      }
 
-    footer { background: #000; color: #aaa; text-align: center; padding: 30px 15px; }
-    footer p { margin: 8px 0; }
-    .socials { margin-top: 15px; }
-    .socials a {
-      margin: 0 10px; display: inline-block; text-decoration: none;
-      color: gold; font-size: 1.5rem; transition: 0.3s;
-    }
-    .socials a:hover { color: #e91e63; }
-  </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-      integrity="sha512-pO2R+kXjWqZ3r3V1J5zD5e5a1J+9n4X4z0n6vWZ06uXJ1u6Nf0M7RzGfJc/3FZp5rXg3e6J2F4s0K9KgY0XUg==" 
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+      .about {
+        background: #131313;
+        padding: 50px 5px;
+      }
+      .about p {
+        max-width: 800px;
+        margin: auto;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #ddd;
+      }
 
-<header>
-  <h1>Leandra Adriely Store</h1>
-  <p>Estilo, beleza e sensualidade</p>
-</header>
+      footer {
+        background: #0c0c0c;
+        color: #aaa;
+        text-align: center;
+        padding: 20px 10px;
+      }
+      footer p {
+        margin: 8px 0;
+      }
+      .socials {
+        margin-top: 15px;
+      }
+      .socials a {
+        margin: 0 10px;
+        display: inline-block;
+        text-decoration: none;
+        color: gold;
+        font-size: 1.5rem;
+        transition: 0.3s;
+      }
+      .socials a:hover {
+        color: #e91e63;
+      }
 
-<div class="hero">
-  Promoções exclusivas toda semana!
-</div>
+      /* Screen-reader only text */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
 
-<section class="section">
-  <h2>Categorias</h2>
-  <div class="grid">
-    <!-- Moda Feminina -->
-    <div class="card">
-      <img src="https://images.pexels.com/photos/8386648/pexels-photo-8386648.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Moda Feminina">
-      <p>Moda Feminina</p>
-    </div>
+      @media (hover: hover) and (pointer: fine) {
+        .card:hover {
+          transform: translateY(-4px) scale(1.02);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+      }
 
-    <!-- Moda Masculina -->
-    <div class="card">
-      <img src="https://images.pexels.com/photos/5698847/pexels-photo-5698847.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Moda Masculina">
-      <p>Moda Masculina</p>
-    </div>
+      @media (max-width: 768px) {
+        header {
+          padding: 28px 16px;
+        }
+        .section {
+          padding: 36px 16px;
+        }
+      }
 
-    <!-- Bolsas e Acessórios -->
-    <div class="card">
-      <img src="https://images.pexels.com/photos/7679471/pexels-photo-7679471.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bolsas e Acessórios">
-      <p>Bolsas e Acessórios</p>
-    </div>
+      @media (max-width: 480px) {
+        .grid {
+          grid-template-columns: 1fr;
+          padding: 0 12px;
+        }
+      }
 
-    <!-- Cosméticos -->
-    <div class="card">
-      <img src="https://images.pexels.com/photos/3018845/pexels-photo-3018845.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cosméticos">
-      <p>Cosméticos</p>
-    </div>
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+        .card:hover {
+          transform: none !important;
+        }
+      }
+      a:focus-visible {
+        outline: 3px solid #e91e63;
+        outline-offset: 3px;
+        border-radius: 6px;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Leandra Adriely Store</h1>
+      <p>Estilo, beleza e sensualidade</p>
+    </header>
 
-    <!-- Produtos Eróticos -->
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2022/02/03/14/16/sex-6990493_1280.png?auto=compress&cs=tinysrgb&w=800" alt="Produtos Eróticos">
-      <p>Produtos Eróticos</p>
-    </div>
-  </div>
-</section>
+    <div class="hero">Promoções exclusivas toda semana!</div>
 
-<section class="about" style="text-align: center;">
-  <h2>Sobre a Loja</h2>
-  <p>
-    A <strong>Leandra Adriely Store</strong> nasceu com o propósito de oferecer moda, beleza e sensualidade em um só lugar. 
-    Nossa missão é valorizar mulheres e homens que buscam estilo, elegância e autenticidade. 
-    Trabalhamos com carinho para que cada cliente encontre aqui algo que desperte confiança e atitude.
-  </p>
-</section>
+    <section class="section">
+      <h2>Categorias</h2>
+      <div class="grid">
+        <!-- Moda Feminina -->
+        <div class="card">
+          <img
+            src="https://images.pexels.com/photos/8386648/pexels-photo-8386648.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Moda Feminina"
+          />
+          <p>Moda Feminina</p>
+        </div>
 
-<footer>
-  <p>Entre em contato pelo WhatsApp: <a href="https://wa.me/5564992782597">(64) 99278-2597</a></p>
-  <div class="socials">
-    <a href="https://www.instagram.com/leandraadriely" target="_blank" title="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-  <p>© 2025 - Leandra Adriely Store. Todos os direitos reservados.</p>
-</footer>
+        <!-- Moda Masculina -->
+        <div class="card">
+          <img
+            src="https://images.pexels.com/photos/5698847/pexels-photo-5698847.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Moda Masculina"
+          />
+          <p>Moda Masculina</p>
+        </div>
 
-</body>
+        <!-- Bolsas e Acessórios -->
+        <div class="card">
+          <img
+            src="https://images.pexels.com/photos/7679471/pexels-photo-7679471.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Bolsas e Acessórios"
+          />
+          <p>Bolsas e Acessórios</p>
+        </div>
+
+        <!-- Cosméticos -->
+        <div class="card">
+          <img
+            src="https://images.pexels.com/photos/3018845/pexels-photo-3018845.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Cosméticos"
+          />
+          <p>Cosméticos</p>
+        </div>
+
+        <!-- Produtos Eróticos -->
+        <div class="card">
+          <img
+            src="https://cdn.pixabay.com/photo/2022/02/03/14/16/sex-6990493_1280.png?auto=compress&cs=tinysrgb&w=800"
+            alt="Produtos Eróticos"
+          />
+          <p>Produtos Eróticos</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" style="text-align: center">
+      <h2>Sobre a Loja</h2>
+      <p>
+        A <strong>Leandra Adriely Store</strong> nasceu com o propósito de
+        oferecer moda, beleza e sensualidade em um só lugar. Nossa missão é
+        valorizar mulheres e homens que buscam estilo, elegância e
+        autenticidade. Trabalhamos com carinho para que cada cliente encontre
+        aqui algo que desperte confiança e atitude.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        Entre em contato pelo WhatsApp:
+        <a href="https://wa.me/5564992782597">(64) 99278-2597</a>
+      </p>
+      <div class="socials">
+        <a
+          href="https://www.instagram.com/leandraadriely"
+          target="_blank"
+          title="Instagram"
+        >
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+      </div>
+      <p>© 2025 - Leandra Adriely Store. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>
